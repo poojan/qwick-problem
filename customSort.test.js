@@ -3,6 +3,13 @@ import { doThingsAndStuff } from "./customSort";
 const fun = doThingsAndStuff;
 
 describe("customSort: doThingsAndStuff(x)", () => {
+  test("Empty array", () => {
+    let arr = [];
+    let expected = [];
+    const res = fun(arr);
+    expect(arr).toEqual(expected);
+  });
+
   test("Ignore strings without spaces: apple, banana apple", () => {
     let arr = ["apple", "banana apple"];
     let expected = ["banana apple"];

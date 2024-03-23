@@ -1,8 +1,15 @@
-import * as orig from "./orig";
+import { doThingsAndStuff } from "./orig";
 
-const fun = orig.doThingsAndStuff;
+const fun = doThingsAndStuff;
 
 describe("Original: doThingsAndStuff(x)", () => {
+  test("Empty array", () => {
+    let arr = [];
+    let expected = [];
+    const res = fun(arr);
+    expect(arr).toEqual(expected);
+  });
+
   test("Ignore strings without spaces: apple, banana apple", () => {
     let arr = ["apple", "banana apple"];
     let expected = ["banana apple"];

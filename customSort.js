@@ -1,4 +1,4 @@
-function customSort(x) {
+const customSort = (x) => {
   return x
     .filter((str) => str.includes(" ")) // Remove strings that don't contain a space
     .sort((aStr, bStr) => {
@@ -22,11 +22,11 @@ function customSort(x) {
       return aStr.length - bStr.length;
     }) // Sort strings based on char codes after a space.
     .reverse(); // Reverse the order of the strings
-}
+};
 
 // Wrapper for customSort() function.
 // Retains the function signature of doThingsAndStuff which modifies the original array.
-export var doThingsAndStuff = (x) => {
+export const doThingsAndStuff = (x) => {
   if (!x) {
     return;
   }

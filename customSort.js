@@ -1,5 +1,5 @@
-const customSort = (x) => {
-  return x
+const customSort = (stringArr) => {
+  return stringArr
     .filter((str) => str.includes(" ")) // Remove strings that don't contain a space
     .sort((aStr, bStr) => {
       const aSpacePos = aStr.indexOf(" ");

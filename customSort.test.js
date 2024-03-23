@@ -85,3 +85,26 @@ describe("customSort: doThingsAndStuff(x)", () => {
     expect(arr).toEqual(expected);
   });
 });
+
+describe("customSort: doThingsAndStuff(x) - additional test(s)", () => {
+  test("Null", () => {
+    let arr = null;
+    let expected = null;
+    const res = fun(arr);
+    expect(arr).toEqual(expected);
+  });
+
+  test("Non-Array", () => {
+    let arr = 1;
+    let expected = 1;
+    const res = fun(arr);
+    expect(arr).toEqual(expected);
+  });
+
+  test("Non-string array", () => {
+    let arr = [1, 2, 3];
+    let expected = [1, 2, 3];
+    const res = fun(arr);
+    expect(arr).toEqual(expected);
+  });
+});

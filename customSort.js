@@ -27,6 +27,18 @@ function customSort(x) {
 // Wrapper for customSort() function.
 // Retains the function signature of doThingsAndStuff which modifies the original array.
 export var doThingsAndStuff = (x) => {
+  if (!x) {
+    return;
+  }
+
+  if (!Array.isArray(x)) {
+    return;
+  }
+
+  if (x.some((item) => typeof item !== "string")) {
+    return;
+  }
+
   const result = customSort(x);
 
   // Clear the original array

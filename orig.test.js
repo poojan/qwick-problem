@@ -76,6 +76,15 @@ describe("Original: doThingsAndStuff(x)", () => {
     expect(arr).toEqual(expected);
   });
 
+  test("Phrases where one is a prefix of another", () => {
+    const arr = ["fish food", "fish foods"];
+    const expected = ["fish foods", "fish food"];
+
+    fun(arr);
+
+    expect(arr).toEqual(expected);
+  });
+
   // The order of empty spaces seem arbitrary.
   // Ignoring ordering of empty spaces as a test criteria.
   test.skip("Order of empty spaces", () => {
